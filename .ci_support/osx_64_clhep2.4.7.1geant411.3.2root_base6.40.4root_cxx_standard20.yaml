@@ -10,18 +10,20 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
+clhep:
+- 2.4.7.1
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '19'
+- '21'
 geant4:
-- 11.4.2
+- 11.3.2
 macos_machine:
 - x86_64-apple-darwin13.4.0
 root_base:
-- 6.38.4
+- 6.40.4
 root_cxx_standard:
-- '23'
+- '20'
 target_platform:
 - osx-64
 vgm:
@@ -29,5 +31,7 @@ vgm:
 vmc:
 - '2.2'
 zip_keys:
+- - clhep
+  - geant4
 - - root_base
   - root_cxx_standard
