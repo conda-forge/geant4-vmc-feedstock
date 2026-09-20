@@ -26,6 +26,9 @@ requirements:
     - root_cxx_standard
     - vmc
     - geant4
+    # Geant4Config.cmake find_dependency()s EXPAT; geant4 itself only pulls in
+    # libexpat, which has no headers.
+    - expat
     - vgm
     - clhep
   run_exports:
