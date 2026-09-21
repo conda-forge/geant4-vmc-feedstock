@@ -10,9 +10,13 @@ source:
   sha256: 5fc038ef63739bd7a7bf63e43589af020e37dc2154512619d11a6bed31fbe7b8
 
 build:
-  number: 0
+  number: 1
   skip:
     - win
+    # TG4SDManager.cxx calls G4VScoringMesh::GetMFD, which Geant4 only grew in
+    # 11.4, so the 10.7.4 and 11.3.2 legs of the zipped clhep/geant4 variant
+    # cannot compile.
+    - match(geant4, "<11.4")
   script: build.sh
 
 requirements:
@@ -26,6 +30,9 @@ requirements:
     - root_cxx_standard
     - vmc
     - geant4
+    # Geant4Config.cmake find_dependency()s EXPAT; geant4 itself only pulls in
+    # libexpat, which has no headers.
+    - expat
     - vgm
     - clhep
   run_exports:
