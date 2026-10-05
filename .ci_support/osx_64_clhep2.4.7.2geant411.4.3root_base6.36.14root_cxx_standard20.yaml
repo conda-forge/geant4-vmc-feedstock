@@ -19,13 +19,13 @@ cxx_compiler_version:
 expat:
 - '2'
 geant4:
-- 11.4.2
+- 11.4.3
 macos_machine:
 - x86_64-apple-darwin13.4.0
 root_base:
-- 6.40.4
+- 6.36.14
 root_cxx_standard:
-- '23'
+- '20'
 target_platform:
 - osx-64
 vgm:
