@@ -1,0 +1,5 @@
+# conda-forge's global pinning still holds vgm at 5.4, but vgm 5.4 has no
+# geant4 11.4.3 builds; only 5.5 does. Drop this once the global pin moves
+# to 5.5 (conda-forge/conda-forge-pinning-feedstock#9122).
+vgm:
+  - "5.5"
